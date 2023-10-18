@@ -65,4 +65,4 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     </div>
   );
 };
-export default info;
+export default Info;
