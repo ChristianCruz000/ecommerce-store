@@ -1,20 +1,23 @@
 "use client";
 
-import { Product } from "@/types";
+import { ShoppingCart } from "lucide-react";
+
 import Currency from "@/components/ui/currency";
 import Button from "@/components/ui/button";
+import { Product } from "@/types";
 import useCart from "@/hooks/use-cart";
 
 interface InfoProps {
   data: Product;
 }
 
-const info: React.FC<InfoProps> = ({ data }) => {
+const Info: React.FC<InfoProps> = ({ data }) => {
   const cart = useCart();
 
   const onAddToCart = () => {
     cart.addItem(data);
   };
+
   return (
     <div>
       <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
